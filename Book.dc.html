@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#FFF9EE; font-family:'Archivo',sans-serif; }
+  a { color:#0B6E6E; text-decoration:none; } a:hover { color:#FF6F61; }
+  input, select, textarea { font-family:'Archivo',sans-serif; }
+  @keyframes float1 { 0%,100%{transform:translate(0,0) rotate(0deg)} 50%{transform:translate(18px,-26px) rotate(8deg)} }
+  @keyframes float3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(12px,16px) scale(1.08)} }
+</style>
+</helmet>
+
+<div style="position:sticky;top:0;z-index:50;background:rgba(255,249,238,.94);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(11,59,60,.1);display:flex;align-items:center;justify-content:space-between;padding:12px 40px">
+  <a href="Home.dc.html" style="display:flex;align-items:center;gap:12px">
+    <img src="assets/litu-logo.png" alt="LITU logo" style="width:46px;height:46px;border-radius:10px;display:block">
+    <span style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:20px;letter-spacing:3px;color:#0B6E6E">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FF6F61;line-height:1">We've got you covered.</span>
+    </span>
+  </a>
+  <div style="display:flex;align-items:center;gap:28px">
+    <a href="Home.dc.html" style="font-weight:700;font-size:14px">Home</a>
+    <a href="Services.dc.html" style="font-weight:700;font-size:14px">Services</a>
+    <a href="Contact.dc.html" style="font-weight:700;font-size:14px">Contact</a>
+    <a href="Book.dc.html" style="background:#0FA0A0;color:#FFF9EE;font-weight:800;font-size:14px;padding:10px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(15,160,160,.4)">Book now</a>
+  </div>
+</div>
+
+<div style="background:linear-gradient(180deg,#FFF4DC 0%,#FDE3B5 100%);padding:60px 40px;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;left:8%;top:22%;width:90px;height:90px;border-radius:50%;background:rgba(15,160,160,.16);animation:float1 8s ease-in-out infinite"></div>
+  <div style="position:absolute;right:10%;bottom:16%;width:110px;height:110px;border-radius:50%;background:rgba(255,184,37,.22);animation:float3 7s ease-in-out infinite"></div>
+  <div style="font-family:'Caveat',cursive;font-size:28px;color:#0FA0A0">Wak e disponibilidad</div>
+  <div style="font-weight:900;font-size:44px;color:#0B3B3C">Book a slot</div>
+  <div style="font-size:16px;color:#5c5548;margin-top:8px">Pick a service, choose an available day, and tell us where to reach you.</div>
+</div>
+
+<div style="max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start">
+
+  <div style="background:#FFFFFF;border-radius:24px;box-shadow:0 12px 36px rgba(11,59,60,.12);padding:28px;display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;gap:10px">
+      <button onClick="{{ pickElderly }}" style="{{ elderlyTabStyle }}">♥ Elderly care</button>
+      <button onClick="{{ pickAirbnb }}" style="{{ airbnbTabStyle }}">⌂ Airbnb resupply</button>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <button onClick="{{ prevMonth }}" style="background:#FFF4DC;border:none;border-radius:12px;width:40px;height:40px;font-size:18px;font-weight:800;color:#0B6E6E;cursor:pointer">‹</button>
+      <div style="font-weight:900;font-size:20px;color:#0B3B3C">{{ monthLabel }}</div>
+      <button onClick="{{ nextMonth }}" style="background:#FFF4DC;border:none;border-radius:12px;width:40px;height:40px;font-size:18px;font-weight:800;color:#0B6E6E;cursor:pointer">›</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px">
+      <sc-for list="{{ dayNames }}" as="dn" hint-placeholder-count="7">
+        <div style="text-align:center;font-weight:800;font-size:11px;letter-spacing:1px;color:#8a8172;padding:6px 0">{{ dn }}</div>
+      </sc-for>
+      <sc-for list="{{ cells }}" as="c" hint-placeholder-count="35">
+        <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border-radius:4px;background:#0FA0A0"></span><span style="font-size:12px;font-weight:600;color:#5c5548">Available</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border-radius:4px;background:#EDE6D8"></span><span style="font-size:12px;font-weight:600;color:#5c5548">Fully booked</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border-radius:4px;background:#FF6F61"></span><span style="font-size:12px;font-weight:600;color:#5c5548">Selected</span></div>
+    </div>
+    <div style="background:#FFF4DC;border-radius:14px;padding:12px 16px;font-size:12px;line-height:1.5;color:#8a6d3b"><b>Note:</b> this calendar shows sample availability. It's designed to be connected to your real Google Calendar or Calendly later — your developer swaps this block for the live embed.</div>
+  </div>
+
+  <div style="background:#0B6E6E;border-radius:24px;box-shadow:0 12px 36px rgba(11,59,60,.25);padding:28px;display:flex;flex-direction:column;gap:14px">
+    <div style="font-weight:900;font-size:22px;color:#FFF9EE">{{ formTitle }}</div>
+    <div style="font-family:'Caveat',cursive;font-size:20px;color:#FFB825;line-height:1">{{ selectedLabel }}</div>
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <input value="{{ fName }}" onChange="{{ setName }}" placeholder="Full name" style="border:none;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+        <input value="{{ fEmail }}" onChange="{{ setEmail }}" placeholder="Email" style="border:none;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+        <input value="{{ fPhone }}" onChange="{{ setPhone }}" placeholder="Phone / WhatsApp" style="border:none;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+        <sc-if value="{{ isAirbnb }}" hint-placeholder-val="{{ false }}">
+          <input value="{{ fProperty }}" onChange="{{ setProperty }}" placeholder="Property / listing name" style="border:none;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none;width:100%;box-sizing:border-box">
+        </sc-if>
+        <textarea value="{{ fMsg }}" onChange="{{ setMsg }}" placeholder="Anything we should know? (address, timing, special requests)" rows="3" style="border:none;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none;resize:vertical"></textarea>
+        <button onClick="{{ submit }}" style="{{ submitStyle }}">{{ submitLabel }}</button>
+        <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#C94A3D;color:#FFF9EE;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600">{{ error }}</div>
+        </sc-if>
+      </div>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center;padding:20px 0">
+        <div style="font-size:44px">✓</div>
+        <div style="font-weight:900;font-size:22px;color:#FFF9EE">Masha danki, {{ fName }}!</div>
+        <div style="font-size:14px;line-height:1.6;color:#CFEDE9">Your request for <b>{{ selectedLabel }}</b> is saved. We'll confirm by email or WhatsApp shortly.</div>
+        <button onClick="{{ reset }}" style="background:#FFB825;color:#5C4200;border:none;border-radius:999px;padding:12px 26px;font-weight:800;font-size:14px;cursor:pointer;margin-top:8px">Book another slot</button>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<div style="background:#0B3B3C;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+  <div style="display:flex;align-items:center;gap:12px">
+    <img src="assets/litu-logo.png" alt="LITU logo" style="width:40px;height:40px;border-radius:9px;display:block">
+    <div style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:16px;letter-spacing:3px;color:#FFF9EE">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FFB825;line-height:1">Essentials, assembled with care.</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:26px">
+    <a href="Home.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Home</a>
+    <a href="Services.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Services</a>
+    <a href="Contact.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Contact</a>
+  </div>
+  <div style="font-size:12px;color:#7FB5B0">+297 569 5090 · info@lituaruba.com · Oranjestad, Aruba</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    service: 'elderly',
+    month: new Date().getMonth(), year: new Date().getFullYear(),
+    selected: null, submitted: false, error: '',
+    fName: '', fEmail: '', fPhone: '', fProperty: '', fMsg: ''
+  };
+  // deterministic pseudo-availability per service+date
+  isAvail(y, m, d, svc) {
+    const seed = (y * 372 + m * 31 + d) * (svc === 'elderly' ? 7 : 13);
+    const dow = new Date(y, m, d).getDay();
+    if (svc === 'elderly' && dow === 0) return false;
+    if (svc === 'airbnb' && (dow === 0 || dow === 6)) return false;
+    return (seed % 10) < 7;
+  }
+  renderVals() {
+    const s = this.state;
+    const today = new Date(); today.setHours(0,0,0,0);
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const first = new Date(s.year, s.month, 1);
+    const startPad = (first.getDay() + 6) % 7; // Monday first
+    const daysIn = new Date(s.year, s.month + 1, 0).getDate();
+    const cells = [];
+    const base = 'border:none;border-radius:12px;height:44px;font-size:14px;font-weight:700;cursor:pointer;transition:transform .15s ease;';
+    for (let i = 0; i < startPad; i++) cells.push({ label: '', style: 'background:transparent;border:none;height:44px', pick: () => {} });
+    for (let d = 1; d <= daysIn; d++) {
+      const dt = new Date(s.year, s.month, d);
+      const past = dt < today;
+      const avail = !past && this.isAvail(s.year, s.month, d, s.service);
+      const isSel = s.selected && s.selected.d === d && s.selected.m === s.month && s.selected.y === s.year;
+      let style;
+      if (isSel) style = base + 'background:#FF6F61;color:#FFF9EE;transform:scale(1.06);box-shadow:0 6px 14px rgba(255,111,97,.4)';
+      else if (avail) style = base + 'background:#0FA0A0;color:#FFF9EE';
+      else style = base + 'background:#EDE6D8;color:#B7AC97;cursor:default';
+      cells.push({
+        label: String(d), style,
+        pick: avail || isSel ? (() => this.setState({ selected: { d, m: s.month, y: s.year }, submitted: false })) : (() => {})
+      });
+    }
+    const sel = s.selected;
+    const selectedLabel = sel ? `${months[sel.m]} ${sel.d}, ${sel.y}` : 'Pick an available day on the calendar';
+    const isAirbnb = s.service === 'airbnb';
+    const tab = 'flex:1;border:none;border-radius:999px;padding:12px 10px;font-weight:800;font-size:14px;cursor:pointer;font-family:Archivo,sans-serif;';
+    const bind = k => e => this.setState({ [k]: e.target.value, error: '' });
+    return {
+      monthLabel: `${months[s.month]} ${s.year}`,
+      dayNames: ['MO','TU','WE','TH','FR','SA','SU'],
+      cells,
+      prevMonth: () => { const m = s.month - 1; this.setState(m < 0 ? { month: 11, year: s.year - 1 } : { month: m }); },
+      nextMonth: () => { const m = s.month + 1; this.setState(m > 11 ? { month: 0, year: s.year + 1 } : { month: m }); },
+      pickElderly: () => this.setState({ service: 'elderly', selected: null, submitted: false }),
+      pickAirbnb: () => this.setState({ service: 'airbnb', selected: null, submitted: false }),
+      elderlyTabStyle: tab + (isAirbnb ? 'background:#FFF4DC;color:#8a8172' : 'background:#FF6F61;color:#FFF9EE;box-shadow:0 4px 12px rgba(255,111,97,.35)'),
+      airbnbTabStyle: tab + (isAirbnb ? 'background:#0FA0A0;color:#FFF9EE;box-shadow:0 4px 12px rgba(15,160,160,.35)' : 'background:#FFF4DC;color:#8a8172'),
+      formTitle: isAirbnb ? 'Request Airbnb resupply' : 'Book elderly care',
+      selectedLabel, isAirbnb,
+      fName: s.fName, fEmail: s.fEmail, fPhone: s.fPhone, fProperty: s.fProperty, fMsg: s.fMsg,
+      setName: bind('fName'), setEmail: bind('fEmail'), setPhone: bind('fPhone'), setProperty: bind('fProperty'), setMsg: bind('fMsg'),
+      error: s.error, notSubmitted: !s.submitted, submitted: s.submitted,
+      submitLabel: sel ? 'Request this slot' : 'Select a day first',
+      submitStyle: 'border:none;border-radius:999px;padding:14px;font-weight:800;font-size:15px;cursor:pointer;font-family:Archivo,sans-serif;' + (sel ? 'background:#FFB825;color:#5C4200;box-shadow:0 5px 16px rgba(0,0,0,.2)' : 'background:#0FA0A0;color:#CFEDE9;opacity:.6'),
+      submit: () => {
+        if (!sel) { this.setState({ error: 'Please pick an available day on the calendar.' }); return; }
+        if (!s.fName.trim() || (!s.fEmail.trim() && !s.fPhone.trim())) { this.setState({ error: 'Please add your name and an email or phone number.' }); return; }
+        try {
+          const key = 'litu-booking-requests';
+          const list = JSON.parse(localStorage.getItem(key) || '[]');
+          list.push({ service: s.service, date: selectedLabel, name: s.fName, email: s.fEmail, phone: s.fPhone, property: s.fProperty, msg: s.fMsg, at: new Date().toISOString() });
+          localStorage.setItem(key, JSON.stringify(list));
+        } catch (e) {}
+        this.setState({ submitted: true, error: '' });
+      },
+      reset: () => this.setState({ submitted: false, selected: null, fMsg: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>

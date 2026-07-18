@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#FFF9EE; font-family:'Archivo',sans-serif; }
+  a { color:#0B6E6E; text-decoration:none; } a:hover { color:#FF6F61; }
+  input, select, textarea { font-family:'Archivo',sans-serif; }
+  @keyframes float1 { 0%,100%{transform:translate(0,0) rotate(0deg)} 50%{transform:translate(18px,-26px) rotate(8deg)} }
+  @keyframes float3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(12px,16px) scale(1.08)} }
+</style>
+</helmet>
+
+<div style="position:sticky;top:0;z-index:50;background:rgba(255,249,238,.94);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(11,59,60,.1);display:flex;align-items:center;justify-content:space-between;padding:12px 40px">
+  <a href="Home.dc.html" style="display:flex;align-items:center;gap:12px">
+    <img src="assets/litu-logo.png" alt="LITU logo" style="width:46px;height:46px;border-radius:10px;display:block">
+    <span style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:20px;letter-spacing:3px;color:#0B6E6E">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FF6F61;line-height:1">We've got you covered.</span>
+    </span>
+  </a>
+  <div style="display:flex;align-items:center;gap:28px">
+    <a href="Home.dc.html" style="font-weight:700;font-size:14px">Home</a>
+    <a href="Services.dc.html" style="font-weight:700;font-size:14px">Services</a>
+    <a href="Contact.dc.html" style="font-weight:800;font-size:14px;color:#FF6F61">Contact</a>
+    <a href="Book.dc.html" style="background:#FF6F61;color:#FFF9EE;font-weight:800;font-size:14px;padding:10px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(255,111,97,.4)" style-hover="background:#0FA0A0;color:#FFF9EE">Book now</a>
+  </div>
+</div>
+
+<div style="background:linear-gradient(180deg,#FFF4DC 0%,#FDE3B5 100%);padding:60px 40px;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;left:8%;top:22%;width:90px;height:90px;border-radius:50%;background:rgba(255,111,97,.18);animation:float1 8s ease-in-out infinite"></div>
+  <div style="position:absolute;right:10%;bottom:16%;width:110px;height:110px;border-radius:50%;background:rgba(15,160,160,.16);animation:float3 7s ease-in-out infinite"></div>
+  <div style="font-family:'Caveat',cursive;font-size:28px;color:#FF6F61">Papia cu nos</div>
+  <div style="font-weight:900;font-size:44px;color:#0B3B3C">Get in touch</div>
+  <div style="font-size:16px;color:#5c5548;margin-top:8px">Tell us what you need and we'll get back to you within a day.</div>
+</div>
+
+<div style="max-width:1100px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start">
+
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="background:#FFF4DC;border-radius:20px;padding:24px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 22px rgba(11,59,60,.08)">
+      <div style="width:52px;height:52px;border-radius:16px;background:#0FA0A0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#FFF9EE;flex-shrink:0">✆</div>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div style="font-weight:800;font-size:15px;color:#0B3B3C">Phone / WhatsApp</div>
+        <div style="font-size:14px;color:#5c5548">+297 569 5090</div>
+      </div>
+    </div>
+    <div style="background:#FFF4DC;border-radius:20px;padding:24px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 22px rgba(11,59,60,.08)">
+      <div style="width:52px;height:52px;border-radius:16px;background:#FFB825;display:flex;align-items:center;justify-content:center;font-size:22px;color:#5C4200;flex-shrink:0">✉</div>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div style="font-weight:800;font-size:15px;color:#0B3B3C">Email</div>
+        <div style="font-size:14px;color:#5c5548">info@lituaruba.com</div>
+      </div>
+    </div>
+    <div style="background:#FFF4DC;border-radius:20px;padding:24px;display:flex;align-items:center;gap:16px;box-shadow:0 8px 22px rgba(11,59,60,.08)">
+      <div style="width:52px;height:52px;border-radius:16px;background:#FF6F61;display:flex;align-items:center;justify-content:center;font-size:22px;color:#FFF9EE;flex-shrink:0">⌖</div>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div style="font-weight:800;font-size:15px;color:#0B3B3C">Based in</div>
+        <div style="font-size:14px;color:#5c5548">Oranjestad, Aruba</div>
+      </div>
+    </div>
+    <div style="background:#0B6E6E;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgba(11,59,60,.2)">
+      <div style="font-family:'Caveat',cursive;font-size:22px;color:#FFB825;line-height:1">Pa nos grandinan ♥</div>
+      <div style="font-size:13px;line-height:1.6;color:#CFEDE9">20% of proceeds fund free elder care rides on Aruba.</div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-radius:24px;box-shadow:0 12px 36px rgba(11,59,60,.12);padding:32px;display:flex;flex-direction:column;gap:14px">
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-weight:900;font-size:24px;color:#0B3B3C">Leave your info</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <input value="{{ fName }}" onChange="{{ setName }}" placeholder="Full name" style="border:2px solid #EDE6D8;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+          <input value="{{ fEmail }}" onChange="{{ setEmail }}" placeholder="Email" style="border:2px solid #EDE6D8;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+          <input value="{{ fPhone }}" onChange="{{ setPhone }}" placeholder="Phone / WhatsApp" style="border:2px solid #EDE6D8;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+          <input value="{{ fProperty }}" onChange="{{ setProperty }}" placeholder="Property / hotel name (optional)" style="border:2px solid #EDE6D8;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-weight:800;font-size:13px;letter-spacing:1px;color:#8a8172">SERVICE YOU'RE INTERESTED IN</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ serviceChips }}" as="chip" hint-placeholder-count="4">
+              <button onClick="{{ chip.pick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <textarea value="{{ fMsg }}" onChange="{{ setMsg }}" placeholder="Your message — what do you need, how often, for whom?" rows="4" style="border:2px solid #EDE6D8;border-radius:12px;padding:13px 16px;font-size:14px;background:#FFF9EE;color:#0B3B3C;outline:none;resize:vertical"></textarea>
+        <button onClick="{{ submit }}" style="background:#FF6F61;color:#FFF9EE;border:none;border-radius:999px;padding:15px;font-weight:800;font-size:16px;cursor:pointer;font-family:Archivo,sans-serif;box-shadow:0 6px 18px rgba(255,111,97,.35)">Send message</button>
+        <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#C94A3D;color:#FFF9EE;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600">{{ error }}</div>
+        </sc-if>
+      </div>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center;padding:30px 0">
+        <div style="font-size:48px">✓</div>
+        <div style="font-weight:900;font-size:24px;color:#0B3B3C">Masha danki, {{ fName }}!</div>
+        <div style="font-size:15px;line-height:1.6;color:#5c5548;max-width:380px">Your message is saved. We'll reach out about <b>{{ chosenService }}</b> soon.</div>
+        <button onClick="{{ reset }}" style="background:#0FA0A0;color:#FFF9EE;border:none;border-radius:999px;padding:12px 26px;font-weight:800;font-size:14px;cursor:pointer;margin-top:8px;font-family:Archivo,sans-serif">Send another</button>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<div style="background:#0B3B3C;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+  <div style="display:flex;align-items:center;gap:12px">
+    <img src="assets/litu-logo.png" alt="LITU logo" style="width:40px;height:40px;border-radius:9px;display:block">
+    <div style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:16px;letter-spacing:3px;color:#FFF9EE">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FFB825;line-height:1">Essentials, assembled with care.</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:26px">
+    <a href="Home.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Home</a>
+    <a href="Services.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Services</a>
+    <a href="Book.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Book</a>
+  </div>
+  <div style="font-size:12px;color:#7FB5B0">+297 569 5090 · info@lituaruba.com · Oranjestad, Aruba</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { fName: '', fEmail: '', fPhone: '', fProperty: '', fMsg: '', service: 'Airbnb resupply', submitted: false, error: '' };
+  renderVals() {
+    const s = this.state;
+    const services = ['Airbnb resupply', 'Hotel supply', 'Elderly care', 'Other'];
+    const bind = k => e => this.setState({ [k]: e.target.value, error: '' });
+    const chipBase = 'border:none;border-radius:999px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer;font-family:Archivo,sans-serif;transition:transform .15s ease;';
+    return {
+      fName: s.fName, fEmail: s.fEmail, fPhone: s.fPhone, fProperty: s.fProperty, fMsg: s.fMsg,
+      setName: bind('fName'), setEmail: bind('fEmail'), setPhone: bind('fPhone'), setProperty: bind('fProperty'), setMsg: bind('fMsg'),
+      serviceChips: services.map(label => ({
+        label,
+        style: chipBase + (s.service === label ? 'background:#0FA0A0;color:#FFF9EE;transform:scale(1.05);box-shadow:0 4px 12px rgba(15,160,160,.35)' : 'background:#FFF4DC;color:#8a8172'),
+        pick: () => this.setState({ service: label })
+      })),
+      chosenService: s.service,
+      notSubmitted: !s.submitted, submitted: s.submitted, error: s.error,
+      submit: () => {
+        if (!s.fName.trim() || (!s.fEmail.trim() && !s.fPhone.trim())) { this.setState({ error: 'Please add your name and an email or phone number.' }); return; }
+        try {
+          const key = 'litu-contact-requests';
+          const list = JSON.parse(localStorage.getItem(key) || '[]');
+          list.push({ name: s.fName, email: s.fEmail, phone: s.fPhone, property: s.fProperty, service: s.service, msg: s.fMsg, at: new Date().toISOString() });
+          localStorage.setItem(key, JSON.stringify(list));
+        } catch (e) {}
+        this.setState({ submitted: true, error: '' });
+      },
+      reset: () => this.setState({ submitted: false, fMsg: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>

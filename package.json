@@ -1,0 +1,10 @@
+{
+  "name": "litu-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "unpack": "node scripts/unpack.mjs",
+    "dev": "npx --yes serve .",
+    "start": "npx --yes serve ."
+  }
+}

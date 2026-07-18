@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html><head>
+<script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"assets/js/cc7fd076-5835-4578-ba76-2f93f8d88966.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"assets/js/9f2815e7-8836-45c9-bff0-0a0039bfedda.js"};</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/js/effe7ad7-b001-45a1-8329-8499936d8ff1.js"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/792c9e05-8716-46a9-bab3-078c215d4afb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/a59b9901-cc45-4896-9e54-893b64499a07.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/48de20d6-d967-4419-8d90-d811718bbc2b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/792c9e05-8716-46a9-bab3-078c215d4afb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/a59b9901-cc45-4896-9e54-893b64499a07.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/48de20d6-d967-4419-8d90-d811718bbc2b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/792c9e05-8716-46a9-bab3-078c215d4afb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/a59b9901-cc45-4896-9e54-893b64499a07.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/48de20d6-d967-4419-8d90-d811718bbc2b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/792c9e05-8716-46a9-bab3-078c215d4afb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/a59b9901-cc45-4896-9e54-893b64499a07.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/48de20d6-d967-4419-8d90-d811718bbc2b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/792c9e05-8716-46a9-bab3-078c215d4afb.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/a59b9901-cc45-4896-9e54-893b64499a07.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/48de20d6-d967-4419-8d90-d811718bbc2b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/1f2cf686-6975-475d-8dab-ddce305f3588.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/87cbf84e-c42d-4fb7-a2c3-1a7b0d3486f0.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/698fadcd-1361-4d39-a504-68bbc1de0333.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/af53ed41-5094-461d-a5f8-2bbf456fe557.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/1f2cf686-6975-475d-8dab-ddce305f3588.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/87cbf84e-c42d-4fb7-a2c3-1a7b0d3486f0.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/698fadcd-1361-4d39-a504-68bbc1de0333.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/af53ed41-5094-461d-a5f8-2bbf456fe557.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/1f2cf686-6975-475d-8dab-ddce305f3588.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/87cbf84e-c42d-4fb7-a2c3-1a7b0d3486f0.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/698fadcd-1361-4d39-a504-68bbc1de0333.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/af53ed41-5094-461d-a5f8-2bbf456fe557.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  body { margin:0; background:#FFF9EE; font-family:'Archivo',sans-serif; }
+  a { color:#0B6E6E; text-decoration:none; } a:hover { color:#FF6F61; }
+  @keyframes float1 { 0%,100%{transform:translate(0,0) rotate(0deg)} 50%{transform:translate(18px,-26px) rotate(8deg)} }
+  @keyframes float2 { 0%,100%{transform:translate(0,0) rotate(0deg)} 50%{transform:translate(-22px,20px) rotate(-10deg)} }
+  @keyframes float3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(12px,16px) scale(1.08)} }
+  @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+</style>
+</helmet>
+
+<div style="position:sticky;top:0;z-index:50;background:rgba(255,249,238,.94);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(11,59,60,.1);display:flex;align-items:center;justify-content:space-between;padding:12px 40px">
+  <a href="Home.dc.html" style="display:flex;align-items:center;gap:12px">
+    <img src="assets/images/0f49a126-efd6-4a6f-864f-8383cb249580.png" alt="LITU logo" style="width:46px;height:46px;border-radius:10px;display:block">
+    <span style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:20px;letter-spacing:3px;color:#0B6E6E">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FF6F61;line-height:1">We've got you covered.</span>
+    </span>
+  </a>
+  <div style="display:flex;align-items:center;gap:28px">
+    <a href="Home.dc.html" style="font-weight:800;font-size:14px;color:#FF6F61">Home</a>
+    <a href="Services.dc.html" style="font-weight:700;font-size:14px">Services</a>
+    <a href="Contact.dc.html" style="font-weight:700;font-size:14px">Contact</a>
+    <a href="Book.dc.html" style="background:#FF6F61;color:#FFF9EE;font-weight:800;font-size:14px;padding:10px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(255,111,97,.4)" style-hover="background:#0FA0A0;color:#FFF9EE">Book now</a>
+  </div>
+</div>
+
+<div style="position:relative;background:linear-gradient(180deg,#FFF4DC 0%,#FDE3B5 100%);overflow:hidden;padding:90px 40px 120px 40px">
+  <div style="position:absolute;left:6%;top:12%;width:120px;height:120px;border-radius:50%;background:rgba(15,160,160,.16);animation:float1 7s ease-in-out infinite"></div>
+  <div style="position:absolute;right:10%;top:20%;width:80px;height:80px;border-radius:50%;background:rgba(255,111,97,.2);animation:float2 9s ease-in-out infinite"></div>
+  <div style="position:absolute;right:22%;bottom:14%;width:150px;height:150px;border-radius:50%;background:rgba(255,184,37,.22);animation:float3 8s ease-in-out infinite"></div>
+  <div style="position:absolute;left:16%;bottom:10%;width:60px;height:60px;border-radius:50%;background:rgba(11,110,110,.14);animation:float2 6s ease-in-out infinite"></div>
+  <div style="position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'Caveat',cursive;font-size:30px;color:#0FA0A0;line-height:1">Bon bini na LITU!</div>
+      <div style="font-weight:900;font-size:56px;line-height:1.05;color:#0B3B3C;text-wrap:balance">Essentials, delivered with care on Aruba.</div>
+      <div style="font-size:18px;line-height:1.6;color:#5c5548;max-width:520px">We resupply Airbnbs and hotels, and run caring transport &amp; errand services for our elders — so you can leave it to us.</div>
+      <div style="display:flex;gap:16px;margin-top:8px">
+        <a href="Book.dc.html" style="background:#0FA0A0;color:#FFF9EE;font-weight:800;font-size:16px;padding:16px 32px;border-radius:999px;box-shadow:0 6px 20px rgba(15,160,160,.4)" style-hover="background:#0B6E6E;color:#FFF9EE">Check availability</a>
+        <a href="Services.dc.html" style="background:#FFF9EE;color:#0B6E6E;font-weight:800;font-size:16px;padding:16px 32px;border-radius:999px;border:2px solid #0FA0A0" style-hover="background:#0FA0A0;color:#FFF9EE">See services</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+        <span style="background:#FF6F61;color:#FFF9EE;font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 14px;border-radius:999px;animation:bob 3s ease-in-out infinite">♥ 20%</span>
+        <span style="font-size:13px;font-weight:600;color:#5c5548">of proceeds fund elder care rides — pa nos grandinan.</span>
+      </div>
+    </div>
+    <div style="position:relative;height:420px">
+      <div style="position:absolute;inset:0;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(11,59,60,.25);transform:rotate(2deg)">
+        <img src="assets/images/48123ced-f830-47e4-b5f2-187b18653f3a.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:#0FA0A0;overflow:hidden;padding:14px 0">
+  <div style="display:flex;white-space:nowrap;animation:marquee 22s linear infinite;width:max-content">
+    <div style="display:flex;gap:40px;padding-right:40px;font-weight:800;font-size:15px;letter-spacing:2px;color:#FFF9EE">
+      <span>MASHA DANKI</span><span>·</span><span>WE'VE GOT YOU COVERED</span><span>·</span><span>PA NOS GRANDINAN</span><span>·</span><span>AIRBNB RESUPPLY</span><span>·</span><span>HOTEL SUPPLY</span><span>·</span><span>ELDERLY CARE</span><span>·</span>
+    </div>
+    <div style="display:flex;gap:40px;padding-right:40px;font-weight:800;font-size:15px;letter-spacing:2px;color:#FFF9EE">
+      <span>MASHA DANKI</span><span>·</span><span>WE'VE GOT YOU COVERED</span><span>·</span><span>PA NOS GRANDINAN</span><span>·</span><span>AIRBNB RESUPPLY</span><span>·</span><span>HOTEL SUPPLY</span><span>·</span><span>ELDERLY CARE</span><span>·</span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:0 auto;padding:90px 40px">
+  <div data-reveal="1" style="text-align:center;margin-bottom:56px">
+    <div style="font-family:'Caveat',cursive;font-size:26px;color:#FF6F61">Kico nos ta hasi</div>
+    <div style="font-weight:900;font-size:38px;color:#0B3B3C">What we do</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <a href="Services.dc.html#airbnb" data-reveal="1" style="background:#FFF4DC;border-radius:22px;padding:0 0 28px 0;overflow:hidden;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(11,59,60,.08);transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-8px);box-shadow:0 18px 40px rgba(11,59,60,.18)">
+      <div style="height:170px;position:relative">
+        <img src="assets/images/7e675469-2b64-4fac-8d84-208f8461daaf.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:0 24px">
+        <div style="font-weight:800;font-size:20px;color:#0B6E6E">Airbnb resupplies</div>
+        <div style="font-size:14px;line-height:1.55;color:#5c5548">Kitchen, bathroom and welcome bundles restocked between guests — automatically.</div>
+        <div style="font-weight:800;font-size:13px;color:#FF6F61">Explore bundles →</div>
+      </div>
+    </a>
+    <a href="Services.dc.html#hotel" data-reveal="1" style="background:#FFF4DC;border-radius:22px;padding:0 0 28px 0;overflow:hidden;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(11,59,60,.08);transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-8px);box-shadow:0 18px 40px rgba(11,59,60,.18)">
+      <div style="height:170px;position:relative">
+        <img src="assets/images/79747f8b-7373-4bc7-8e99-07d11afd745a.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:0 24px">
+        <div style="font-weight:800;font-size:20px;color:#C77E00">Hotel supply</div>
+        <div style="font-size:14px;line-height:1.55;color:#5c5548">Reliable bulk amenities and guest kits for hotels and resorts, on your schedule.</div>
+        <div style="font-weight:800;font-size:13px;color:#FF6F61">See how it works →</div>
+      </div>
+    </a>
+    <a href="Services.dc.html#elderly" data-reveal="1" style="background:#FFF4DC;border-radius:22px;padding:0 0 28px 0;overflow:hidden;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(11,59,60,.08);transition:transform .3s ease, box-shadow .3s ease" style-hover="transform:translateY(-8px);box-shadow:0 18px 40px rgba(11,59,60,.18)">
+      <div style="height:170px;position:relative">
+        <img src="assets/images/10c9a457-2a2a-4656-a7ce-a67d149d4849.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:0 24px">
+        <div style="font-weight:800;font-size:20px;color:#C94A3D">Elderly care</div>
+        <div style="font-size:14px;line-height:1.55;color:#5c5548">Transport, errands and friendly check-ins for our grandinan — with heart.</div>
+        <div style="font-weight:800;font-size:13px;color:#FF6F61">Book a ride →</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div style="background:#0B6E6E;padding:80px 40px;position:relative;overflow:hidden">
+  <div style="position:absolute;left:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,249,238,.06);animation:float1 10s ease-in-out infinite"></div>
+  <div style="position:absolute;right:-30px;bottom:-50px;width:240px;height:240px;border-radius:50%;background:rgba(255,184,37,.12);animation:float3 9s ease-in-out infinite"></div>
+  <div data-reveal="1" style="position:relative;max-width:900px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:18px;align-items:center">
+    <div style="font-family:'Caveat',cursive;font-size:30px;color:#FFB825">Pa nos grandinan</div>
+    <div style="font-weight:900;font-size:36px;color:#FFF9EE;text-wrap:balance">Every box you buy moves an elder on Aruba.</div>
+    <div style="font-size:17px;line-height:1.65;color:#CFEDE9;max-width:640px">20% of everything LITU earns funds free transport for elderly islanders — doctor visits, groceries, and a bit of company along the way.</div>
+    <a href="Book.dc.html" style="background:#FFB825;color:#5C4200;font-weight:800;font-size:16px;padding:15px 34px;border-radius:999px;margin-top:8px;box-shadow:0 6px 20px rgba(0,0,0,.2)" style-hover="background:#FFC95A;color:#5C4200">Book elder care</a>
+  </div>
+</div>
+
+<div style="max-width:900px;margin:0 auto;padding:90px 40px;text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center">
+  <div data-reveal="1" style="font-weight:900;font-size:34px;color:#0B3B3C">Ready when you are.</div>
+  <div data-reveal="1" style="font-size:16px;color:#5c5548;max-width:520px;line-height:1.6">Check the calendar for elderly care and Airbnb resupply availability, or leave your details and we'll reach out.</div>
+  <div data-reveal="1" style="display:flex;gap:16px;margin-top:10px">
+    <a href="Book.dc.html" style="background:#FF6F61;color:#FFF9EE;font-weight:800;font-size:16px;padding:15px 32px;border-radius:999px;box-shadow:0 6px 20px rgba(255,111,97,.4)" style-hover="background:#0FA0A0;color:#FFF9EE">Book now</a>
+    <a href="Contact.dc.html" style="background:#FFF9EE;color:#0B6E6E;font-weight:800;font-size:16px;padding:15px 32px;border-radius:999px;border:2px solid #0FA0A0" style-hover="background:#0FA0A0;color:#FFF9EE">Leave contact info</a>
+  </div>
+</div>
+
+<div style="background:#0B3B3C;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+  <div style="display:flex;align-items:center;gap:12px">
+    <img src="assets/images/0f49a126-efd6-4a6f-864f-8383cb249580.png" alt="LITU logo" style="width:40px;height:40px;border-radius:9px;display:block">
+    <div style="display:flex;flex-direction:column">
+      <span style="font-weight:900;font-size:16px;letter-spacing:3px;color:#FFF9EE">LITU</span>
+      <span style="font-family:'Caveat',cursive;font-size:16px;color:#FFB825;line-height:1">Essentials, assembled with care.</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:26px">
+    <a href="Services.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Services</a>
+    <a href="Book.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Book</a>
+    <a href="Contact.dc.html" style="font-weight:700;font-size:13px;color:#CFEDE9">Contact</a>
+  </div>
+  <div style="font-size:12px;color:#7FB5B0">+297 569 5090 · info@lituaruba.com · Oranjestad, Aruba</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity .7s ease, transform .7s ease'; });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this.io.unobserve(e.target); }
+    }), { threshold: .12 });
+    els.forEach(el => this.io.observe(el));
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+
+
+</body></html>
